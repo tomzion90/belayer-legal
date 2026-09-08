@@ -32,7 +32,7 @@
 <body>
 <header>
   <h1>Privacy Policy — Blayer</h1>
-  <p class="meta">Last updated: 4 July 2026 · Effective: 4 July 2026</p>
+  <p class="meta">Last updated: 8 September 2026 · Effective: 8 September 2026</p>
 </header>
 
 <h2>Who we are</h2>
@@ -49,10 +49,26 @@ needs to match you with partners:</p>
   if you use those (we receive a token, not your password).</li>
   <li><strong>Profile:</strong> name, age, profile photo, climbing discipline(s),
   grade range, weight, years of experience, owned gear, preferred locations
-  (gyms/crags), typical availability.</li>
+  (gyms/crags), typical availability, and anything you choose to write about yourself
+  in your profile description (up to 1,000 characters).</li>
+  <!-- <bdi> isolates the Hebrew so the surrounding parentheses, quotes and colon resolve
+       against the page's LTR direction. Without it these neutrals sit at an RTL boundary
+       and the browser is free to reorder them (the S369 bidi class). Do not remove. -->
+  <li><strong>Your introduction (<bdi>הכירו אותי</bdi>):</strong> an optional short headline and
+  message you can publish about yourself. Unlike the rest of your profile, your
+  introduction is <strong>shown to other climbers in their feed without them opening
+  your profile first</strong> — so please treat anything you write there as visible to
+  other Blayer users. You can change it or remove it at any time.</li>
   <li><strong>Activity:</strong> climbers you express interest in, matches, in-app
   messages with matched partners, partner ratings / safety flags you submit, and any
   users you block or report.</li>
+  <li><strong>Which introductions you have been shown.</strong> So that the same
+  climber's introduction does not keep reappearing in your feed, we record how many
+  times you have been shown each person's introduction and the date you were last shown
+  it. We do not record what you read or how long you looked — only a count per person
+  and that one date, and it is never shown to that person or to anyone else. If you are
+  not shown a particular person's introduction for <strong>12 months</strong>, that
+  record is deleted.</li>
   <li><strong>Technical:</strong> basic device and log data needed to run and secure
   the service, and a push-notification token if you enable notifications.</li>
 </ul>
@@ -71,12 +87,48 @@ secure and prevent abuse).</p>
 
 <h2>Who can see what</h2>
 <ul>
-  <li>Your weight is shown only <strong>after a mutual match</strong> (per the product
-  design).</li>
+  <li><strong>Your weight itself is shown only after a mutual match.</strong> No one
+  browsing the app ever sees your weight in kilograms.</li>
+  <li><strong>Before a match, climbers looking at your session post may see a
+  belay-compatibility note.</strong> If you post a session request and another climber
+  sees it while browsing, the app may show them a short note about whether the two of
+  you are a comfortable weight pairing for belaying — for example that an Ohm belay
+  assist is recommended, that the gap is larger than an Ohm is designed for, or that one
+  of you has not shared a weight. This note is a broad category, not a number: it never
+  states or implies your weight, and it is only shown to climbers who have shared a
+  weight themselves. It exists for safety — a large weight gap affects whether a partner
+  can safely hold a fall — and it is equipment guidance, not a safety verdict. You can
+  prevent this note appearing about you at any time by removing your weight from your
+  profile, or by not posting session requests.</li>
+  <li><strong>Your introduction is shown to other climbers who have not matched with
+  you</strong>, in their feed, as described above.</li>
   <li>Matched partners can see your profile and exchange messages with you.</li>
   <li>If you block another user, you and they are removed from each other's discovery,
   matches, and chat. If you report a user, the report (including your identity) is
   visible to the Blayer operator for safety review.</li>
+  <li><strong>What happens to your messages when a conversation ends.</strong> If you
+  <strong>unmatch</strong> someone, the conversation is removed from the app for both of
+  you, and the messages are kept for up to <strong>30 days</strong> before being deleted
+  — longer only if a safety report about that conversation is still open. If you
+  <strong>block</strong> or <strong>report</strong> someone, the conversation is hidden
+  from both of you for as long as the block stands; the messages are not deleted, and
+  they become visible to you both again if you unblock.</li>
+  <li><strong>When the operator can read messages.</strong> During the periods above, the
+  Blayer operator can read the messages <strong>between the two people involved, and only
+  those two</strong>, and <strong>only when investigating a safety report about that
+  conversation</strong>. Today the operator reaches those messages through direct access
+  to our database, so this limit is a rule we work to rather than one the system enforces
+  for us. An operator console that restricts access to the conversation named in a report,
+  and records every access, is in development. We keep messages this way so that abuse
+  reports can be investigated: otherwise someone could erase the evidence of their own
+  behaviour simply by unmatching first. Deleting your account erases your messages,
+  including retained ones.</li>
+  <li><strong>What happens to your introduction when you change it.</strong> If you edit
+  or remove your introduction, the previous version is kept for up to
+  <strong>30 days</strong> before being deleted — longer only if a safety report about
+  that version is still open. We keep it this short period so that a report about
+  something someone wrote can still be investigated after they have changed it. Your
+  current introduction is kept for as long as you choose to have one.</li>
   <li>We share data with the infrastructure providers needed to run the app (hosting,
   database, file storage, push notifications) under their data-processing terms.</li>
 </ul>
@@ -91,7 +143,9 @@ for the transfer.</p>
 <h2>Your rights, including deletion</h2>
 <p>You can <strong>delete your account and all associated data</strong> (profile,
 photos, matches, ratings) from inside the app at any time — this is built into the
-app. Depending on your region (e.g. EU/EEA, UK, California) you may also have rights
+app. The limited exceptions are described under "Data retention &amp; security" below:
+safety reports and operator records are kept for safety and legal-claim purposes.
+Depending on your region (e.g. EU/EEA, UK, California) you may also have rights
 to access, correct, export, restrict, or object to the processing of your data. To
 exercise any of these, email us at
 <a href="mailto:yutomshazion@gmail.com">yutomshazion@gmail.com</a> and we'll respond
@@ -99,7 +153,23 @@ within a reasonable period (and within any timeframe your local law requires).</
 
 <h2>Data retention &amp; security</h2>
 <p>We keep your data while your account is active and delete it on account deletion.
-Data is encrypted in transit (TLS) and at rest; passwords are hashed (Argon2id).</p>
+<strong>Some content is kept for a limited period after it leaves your view:</strong>
+messages from a conversation you unmatched are retained for up to <strong>30 days</strong>,
+or until a related safety report is resolved (plus a short period afterwards), and are
+then deleted. Messages in a conversation you blocked are kept while the block stands, so
+that they can be restored if you unblock. Previous versions of your introduction are
+retained on the same basis: up to <strong>30 days</strong> after you change or remove
+it, or until a related safety report is resolved (plus a short period afterwards). The
+record of which introductions you have been shown is deleted after
+<strong>12 months</strong> without being updated.</p>
+<p>Safety reports, and the records of operator actions, are kept as long as we need them
+for safety and to establish or defend legal claims. A safety report also keeps a copy of
+the email address of the person who filed it and the person it concerns, recorded at the
+time it was filed. We keep that copy even if the account is later deleted, so that a
+report cannot be erased by deleting the account it is about, and so we can recognise
+someone who was removed for safety reasons and signs up again. It is used only for safety
+and legal-claim purposes and is not used to contact you.</p>
+<p>Data is encrypted in transit (TLS) and at rest; passwords are hashed (Argon2id).</p>
 
 <h2>Age requirement</h2>
 <p>Blayer is for adults <strong>18 and older</strong> (v0.1 is adults-only). We do not
